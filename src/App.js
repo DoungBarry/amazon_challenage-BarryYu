@@ -1,22 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Header";
 
 function App() {
   return (
     //BEM
     <div className="App">
+      {/* 這邊創建component  */}
 
-      <h1> hello world reast.js </h1>
+      <Header></Header>
+
+      {/* Header */}
     </div>
   );
 }
 
 export default App;
 
-
 // ----刪除---
-{/* <header className="App-header">
+{
+  /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -29,4 +33,5 @@ export default App;
         >
           Learn React
         </a>
-      </header> */}
+      </header> */
+}

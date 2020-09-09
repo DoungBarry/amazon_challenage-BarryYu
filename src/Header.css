@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  background-color: black;
+  /* position: sticky;
+  top: 0;
+  z-index: 100; */
+}
+
+.header_logo {
+  width: 100px;
+  margin: 0px 20px;
+  /* 只調整左右邊20px */
+  margin-top: 10px;
+  object-fit: contain;
+  /* 保持長寬比例 */
+}
+
+/* .header_serchbar {
+  display: flex;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_option {
+  margin: 50px;
+} */
