@@ -4,8 +4,19 @@ import './App.css';
 
 function App() {
   return (
+    //BEM
     <div className="App">
-      <header className="App-header">
+
+      <h1> hello world reast.js </h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+// ----刪除---
+{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,11 +29,4 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-
-    </div>
-  );
-}
-
-export default App;
-
+      </header> */}
