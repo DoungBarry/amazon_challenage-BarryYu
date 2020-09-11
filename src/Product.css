@@ -1,0 +1,46 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  /* 排列 */
+  align-items: center;
+
+  /* 下面是常用的css基本設定可以複製 */
+  justify-items: center;
+  margin: 10px;
+  padding: 20px;
+
+  /* 將寬度和home依樣大 非常重要*/
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  background-color: white;
+  z-index: 1;
+}
+
+.product > img {
+  max-height: 200px;
+  width: 100%;
+  /* 以這個做比例 */
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product_price {
+  margin-top: 10px;
+}
+
+.product_info {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.product > button {
+  background: coral;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #b49136 #5e4812;
+  color: #111;
+}
+
+.product_rating {
+}
