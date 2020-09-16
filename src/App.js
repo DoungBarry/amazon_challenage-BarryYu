@@ -12,7 +12,6 @@ function App() {
       <Header></Header>
 
       {/* Header */}
-
       <Home />
     </div>
   );
