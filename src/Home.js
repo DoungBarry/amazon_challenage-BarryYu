@@ -1,10 +1,6 @@
 import React from "react";
 import Product from "./Product";
-<<<<<<< HEAD
-
-=======
 import "./Home.css";
->>>>>>> 6b7f4da5363c7ce1e8ab13ab9f2630152ad030c3
 function Home() {
   return (
     <div className="home">
@@ -16,29 +12,16 @@ function Home() {
         />
 
         <div className="home_row">
-          <Product />
+          <Product
+            title="this is book "
+            price={100}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          />
+
           <Product />
           {/* {/* product */}
         </div>
 
-<<<<<<< HEAD
-      {/* produce 欄位的數量會決定大小,自動響應 */}
-      <div className="home_row">
-        <Product />
-        {/* product */}
-        {/* product */}
-      </div>
-
-      <div className="home_row">
-        {/* product */}
-        {/* product */}
-        {/* product */}
-      </div>
-
-      <div className="home_row">{/* product */}</div>
-
-      <div className="home_container"></div>
-=======
         <div className="home_row">
           <Product />
           <Product />
@@ -48,11 +31,11 @@ function Home() {
           {/* product */}
         </div>
         <div className="home_row">
+          <Product />
           {/* <Product /> */}
           {/* product */}
         </div>
       </div>
->>>>>>> 6b7f4da5363c7ce1e8ab13ab9f2630152ad030c3
     </div>
   );
 }
