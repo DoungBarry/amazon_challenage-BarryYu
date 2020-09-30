@@ -3,9 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
+import Checkout from "./Checkout";
 
 //npm install react-router-dom  做好介面後先安裝路由器再輸入import
-import { BowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -15,16 +16,20 @@ function App() {
       <div className="App">
         {/* 這邊創建component  */}
 
+        {/* 換頁面的時候Header 部會改變 */}
+        <Header></Header>
+
         <Switch>
           <Route path="/checkout">
             {/* 這邊放入網頁組件,表示到checkout路徑時會顯示下列 */}
-            <Header></Header>
+           {/* 可以測試: localhot:3000/checkout 路由成功會顯示CHECKOUT內的文字 */}
+            {/* <Header></Header> */}
             <Checkout></Checkout>
           </Route>
 
           <Route path="/">
             {/* 這邊放入網頁組件,表示到checkout路徑時會顯示下列 */}
-            <Header></Header>
+            {/* <Header></Header> */}
             <Home />
           </Route>
         </Switch>
