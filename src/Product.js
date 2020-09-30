@@ -8,14 +8,18 @@ function Product({ title, price, image, rating }) {
   return (
     <div className="product">
       <div className="product_info">
-        <p>{title}</p>
+        <p>{title} </p>
         <p className="product_price">
           <small>NT</small>
           <strong>{price}</strong>
         </p>
 
         <div className="product_rating">
-          <p> s </p>
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p> SSSSSS </p>
+            ))}
         </div>
       </div>
       <img

@@ -3,6 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
+
+//npm install react-router-dom  做好介面後先安裝路由器再輸入import
+import { BowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   return (
     //BEM
