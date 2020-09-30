@@ -10,14 +10,26 @@ import { BowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     //BEM
-    <div className="App">
-      {/* 這邊創建component  */}
+    //用router路由器 給APP (首頁), 在這個首頁裡面裝載Switch功能，交換過程中使用路由Route (可以到指定某頁面)//
+    <Router>
+      <div className="App">
+        {/* 這邊創建component  */}
 
-      <Header></Header>
+        <Switch>
+          <Route path="/checkout">
+            {/* 這邊放入網頁組件,表示到checkout路徑時會顯示下列 */}
+            <Header></Header>
+            <Checkout></Checkout>
+          </Route>
 
-      {/* Header */}
-      <Home />
-    </div>
+          <Route path="/">
+            {/* 這邊放入網頁組件,表示到checkout路徑時會顯示下列 */}
+            <Header></Header>
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
