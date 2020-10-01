@@ -26,7 +26,7 @@ function subtotal() {
         thousandSeparator={true}
         prefix={"NT"}
       />
-
+      <button>process to checkout </button>
       {/* //完成一個組件CurrecnyFormat ,將他導入checkout.css */}
     </div>
   );

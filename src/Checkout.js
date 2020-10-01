@@ -1,6 +1,6 @@
 import React from "react";
 import "./Checkout.css";
-import Subtotal from "./Subtotal"
+import Subtotal from "./Subtotal";
 function Checkout() {
   return (
     <div className="checkout">
@@ -16,16 +16,15 @@ function Checkout() {
         <div>
           <h2 className="checkout_title">your Shopping Baskete購物車</h2>
           {/* //這邊放入你的商品 */}
-          
+
           {/* BasketItem */}
           {/* BasketItem */}
           {/* BasketItem */}
           {/* BasketItem */}
         </div>
       </div>
-
       <div className="checkout_right">
-        <h2>這邊是右邊的</h2>
+        <Subtotal />
       </div>
     </div>
   );
