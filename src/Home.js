@@ -13,13 +13,19 @@ function Home() {
 
         <div className="home_row">
           <Product
-            title="this is book "
+            title="我有一本書"
             price={100}
+            rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
             rating={4}
           />
 
-          <Product />
+          <Product
+            title="我有二本書"
+            price={1000}
+            rating={5}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          />
           {/* {/* product */}
         </div>
 

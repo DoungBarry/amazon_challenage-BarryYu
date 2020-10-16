@@ -3,14 +3,18 @@ import "./Header.css";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-      <img
-        className="header_logo"
-        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-      />
-
+      {/* //這邊做一個link 點下去連結到 /首頁 */}
+      <Link to="/">
+        <img
+          className="header_logo"
+          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        />
+      </Link>
       <div className="header_search">
         <input className="header_searchInput" type="text" />
         {/* LOGO */}
@@ -30,10 +34,14 @@ function Header() {
           <span className="header_optionLineOne">退訂閱</span>
           <span className="header_optionLineTwo">Prime</span>
         </div>
-        <div className="header_optionBasket">
-          <ShoppingBasketIcon />
-          <span className="header_optionLineTwo  header_basketCount">0</span>
-        </div>
+
+        {/* 這邊做一個link 點圖案會連結到購物車 /checkout 的path */}
+        <Link to="/checkout">
+          <div className="header_optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header_optionLineTwo  header_basketCount">0</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

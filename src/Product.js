@@ -8,7 +8,7 @@ function Product({ title, price, image, rating }) {
   return (
     <div className="product">
       <div className="product_info">
-        <p>{title}</p>
+        <p>{title} </p>
         <p className="product_price">
           <small>NT</small>
           <strong>{price}</strong>
