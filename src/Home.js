@@ -17,7 +17,6 @@ function Home() {
             price={100}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
-            rating={4}
           />
 
           <Product

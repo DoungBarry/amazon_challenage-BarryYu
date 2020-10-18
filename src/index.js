@@ -7,7 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 //加入了reducer的initalState
 import reducer, { initialState } from "./reducer";
 //加入狀態提供者
-import { StateProvider } from "./StatProvider";
+import { StateProvider } from "./StateProvider";
 
 ReactDOM.render(
   <React.StrictMode>

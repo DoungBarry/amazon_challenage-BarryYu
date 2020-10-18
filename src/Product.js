@@ -18,11 +18,11 @@ function Product({ title, price, image, rating }) {
 // 物件存取後再ＨＯＭＥ.js針對rating物件只要輸入數字就能改變product.js的rating 數量 // */}
 
         <div className="product_rating">
-          {Array(rating)
+          {/* {Array(rating)
             .fill()
-            .map((_, i) => (
-              <p> s </p>
-            ))}
+            .map((_, i) => {
+              <p> s </p>;
+            })} */}
         </div>
       </div>
       <img

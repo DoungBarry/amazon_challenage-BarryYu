@@ -1,8 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
+import Logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
+import Checkout from "./Checkout";
+import { useStateValue } from "./StateProvider";
+
+//網路路由套件
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -39,8 +44,8 @@ function App() {
 export default App;
 
 // ----刪除---
-{
-  /* <header className="App-header">
+
+/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -54,4 +59,3 @@ export default App;
           Learn React
         </a>
       </header> */
-}
