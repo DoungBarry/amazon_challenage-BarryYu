@@ -1,10 +1,28 @@
 import React from "react";
 import "./Product.css";
 
+import { useStateValue } from "./StateProvider";
+
 //當物件放入function () 的語法裡 ：
 // (title price imgae rating) 放在語法裡是錯誤的
 // 正確是＝> ({title price imgae rating})
-function Product({ title, price, image, rating }) {
+function Product({ id, title, price, image, rating }) {
+  //useStateValue 是將數據層資料拉進來 （ 拉去給checkout )
+  const [state, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title,
+        image: image,
+        price,
+        rating,
+      },
+    });
+  };
+
   return (
     <div className="product">
       <div className="product_info">
@@ -15,14 +33,16 @@ function Product({ title, price, image, rating }) {
         </p>
 
         {/* // js:17 非常棒的小技巧 
-// 物件存取後再ＨＯＭＥ.js針對rating物件只要輸入數字就能改變product.js的rating 數量 // */}
+// 物件存取後再ＨＯＭＥ.js針對rating物件只要輸入數字就能改變product.js的rating 數量 : 51:00 // */}
 
         <div className="product_rating">
-          {/* {Array(rating)
+          {Array(rating)
             .fill()
-            .map((_, i) => {
-              <p> s </p>;
-            })} */}
+            .map((_, i) => (
+              <span role="img" aria-label="sheep">
+                🐑
+              </span>
+            ))}
         </div>
       </div>
       <img

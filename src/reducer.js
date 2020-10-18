@@ -10,10 +10,12 @@ const reducer = (state, action) => {
   // state 初始狀態
   // actaion 從籃子取出來，你想要在這裡做甚麼?
 
+  console.log("this si the basket >>>>>", action);
+
   //需要一個開關 和 做甚麼動作
   switch (action.type) {
     //發生購買的時候
-    case "ADD_TO_BASKET購買":
+    case "ADD_TO_BASKET":
       return {
         //回到狀態會到欄位及動作的項目
         ...state,

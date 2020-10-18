@@ -22,7 +22,7 @@ function Home() {
           <Product
             title="我有二本書"
             price={1000}
-            rating={5}
+            rating={4}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
           {/* {/* product */}
