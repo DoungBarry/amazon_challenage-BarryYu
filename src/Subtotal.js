@@ -4,8 +4,12 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 
 import { useStateValue } from "./StateProvider";
+import { getBasketTotal } from "./reducer";
 
-function subtotal() {
+function Subtotal() {
+  const [{ basket }, dispatch] = useStateValue();
+  //啟用reducer功能 ,目標是改變basket , State value
+
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -14,9 +18,8 @@ function subtotal() {
           <>
             <p>
               {/* port of the somthing */}
-              Subtotal (0 items):<strong>0</strong>
+              Subtotal ({basket.length}item):<strong>{value}</strong>
             </p>
-
             <small className="subtotal_gift">
               <input type="checkbox" className="checkbox" />
               this order contains a gift 總所有品項
@@ -24,7 +27,8 @@ function subtotal() {
           </>
         )}
         decimalScale={2}
-        value={0} //port of somthing
+        // value={0} //port of somthing
+        value={getBasketTotal(basket)} //port of somthing
         displayType={"text"}
         thousandSeparator={true}
         prefix={"NT"}
@@ -35,4 +39,4 @@ function subtotal() {
   );
 }
 
-export default subtotal;
+export default Subtotal;
