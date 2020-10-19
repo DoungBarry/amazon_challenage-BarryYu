@@ -5,7 +5,13 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import { Link } from "react-router-dom";
+
+//當要使用Reduex這個API時 需要套用這個功能, 目的是可以將basket數據透過dispatch工能拉到數據層裡面
+import { useStateValue } from "./StateProvider";
+
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="header">
       {/* //這邊做一個link 點下去連結到 /首頁 */}
@@ -39,7 +45,11 @@ function Header() {
         <Link to="/checkout">
           <div className="header_optionBasket">
             <ShoppingBasketIcon />
-            <span className="header_optionLineTwo  header_basketCount">0</span>
+            <span className="header_optionLineTwo  header_basketCount">
+              {basket?.length}
+            </span>
+
+            {/* <span className="header_optionLineTwo  header_basketCount">0</span> */}
           </div>
         </Link>
       </div>

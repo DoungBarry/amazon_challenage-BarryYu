@@ -2,6 +2,9 @@ import React from "react";
 import "./Subtotal.css";
 //把npm i react-currency-format 輸入工具
 import CurrencyFormat from "react-currency-format";
+
+import { useStateValue } from "./StateProvider";
+
 function subtotal() {
   return (
     <div className="subtotal">

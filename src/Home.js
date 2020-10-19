@@ -15,14 +15,14 @@ function Home() {
           <Product
             title="我有一本書"
             price={100}
-            rating={5}
+            rating={10}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
 
           <Product
             title="我有二本書"
             price={1000}
-            rating={4}
+            rating={7}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
           {/* {/* product */}
