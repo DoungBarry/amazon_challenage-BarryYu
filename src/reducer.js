@@ -7,7 +7,7 @@ export const initialState = {
 
 //very powerful 語法 將所有的 basket總和subtotal.js
 export const getBasketTotal = (basket) =>
-  basket?.reduce((amount, item) => item.price + amount, 0);
+  basket?.reduce((amount, item) => amount + item.price, 0);
 //兩個參數： 箭頭語法 及 0是初始值
 
 const reducer = (state, action) => {

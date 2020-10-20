@@ -57,10 +57,7 @@ https://zh-hant.reactjs.org/docs/lists-and-keys.html
             ))}
         </div>
       </div>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
-        alt=""
-      />
+      <img src={image} alt="" />
 
       <button onClick={addToBasket}> Add to basket </button>
 

@@ -15,7 +15,8 @@ function Home() {
           <Product
             title="我有一本書"
             price={100}
-            rating={10}
+            ß
+            rating={20}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
 
@@ -23,13 +24,18 @@ function Home() {
             title="我有二本書"
             price={1000}
             rating={7}
-            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+            image="https://upload.wikimedia.org/wikipedia/commons/5/53/Asus_x21_ultrabook.jpg"
           />
           {/* {/* product */}
         </div>
 
         <div className="home_row">
-          <Product />
+          <Product
+            title="我有二本書"
+            price={1000}
+            rating={7}
+            image="https://upload.wikimedia.org/wikipedia/commons/5/53/Asus_x21_ultrabook.jpg"
+          />
           <Product />
           <Product />
           {/* product */}
