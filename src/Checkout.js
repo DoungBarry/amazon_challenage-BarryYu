@@ -22,19 +22,15 @@ function Checkout() {
           <CheckoutProduct
             title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
             price={100}
-            ß
-            rating={20}
+            rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
-            title="hello"
           />
 
           <CheckoutProduct
             title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
             price={100}
-            ß
-            rating={20}
+            rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
-            title="hello"
           />
 
           {/* //這邊放入你的商品 */}

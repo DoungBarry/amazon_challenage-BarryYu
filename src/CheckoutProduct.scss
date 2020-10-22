@@ -1,0 +1,39 @@
+$Barry: blue;
+$Marry: red;
+$angle: white;
+
+.checkoutProduct {
+}
+
+.checkoutProduct_img {
+}
+
+.checkoutProduct_price {
+}
+
+.checkoutProduct_info {
+}
+
+.checkoutProduct {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .checkoutProduct_rating {
+    margin-bottom: 10px;
+  }
+
+  img {
+    color: $Barry;
+    max-width: 50%;
+  }
+
+  button {
+    background-color: yellow;
+    margin-bottom: 30px;
+  }
+}
+
+.checkoutProduct_rating {
+}

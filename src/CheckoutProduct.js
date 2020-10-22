@@ -5,13 +5,13 @@ function CheckoutProduct({ id, title, price, image, rating }) {
   return (
     <div className="checkoutProduct">
       <img className="checkoutProduct_image" src={image} alt="" />
-      <div className="checkoutproduct_info">
-        <p>{title}</p>
-        <p className="checkoutproduct_price">
+      <div className="checkoutProduct_info">
+        <p className="checkoutProduct_title">{title}</p>
+        <p className="checkoutProduct_price">
           <small>NT</small>
           <strong>{price}</strong>
         </p>
-        <div className="checkoutproduct_rating">
+        <div className="checkoutProduct_rating">
           {Array(rating)
             //for rating this object
             .fill()

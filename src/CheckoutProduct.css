@@ -1,1 +1,26 @@
+.checkoutProduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
+.checkoutProduct .checkoutProduct_rating {
+  margin-bottom: 10px;
+}
+
+.checkoutProduct img {
+  color: blue;
+  max-width: 50%;
+}
+
+.checkoutProduct button {
+  background-color: yellow;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=checkoutProduct.css.map */
