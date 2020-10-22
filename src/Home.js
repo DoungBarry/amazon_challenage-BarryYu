@@ -7,43 +7,63 @@ function Home() {
       <div className="home_container">
         <img
           className="home_image"
-          src="https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/JJ/1400X280_Shopping-and-entertainment._CB468925650_.jp"
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_v2_2x._CB432458382_.jpg"
           alt=" "
         />
 
         <div className="home_row">
           <Product
-            title="我有一本書"
+            title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
             price={100}
-            ß
-            rating={20}
+            rating={5}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          />
+          <Product
+            title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
+            price={100}
+            rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
 
-          <Product
-            title="我有二本書"
+          {/* <Product
+            title="TP-Link AC1750 智慧 WiFi 路由器 (Archer A7) - 家用雙頻千兆無線網路路由器 適用於 Alexa、VPN 伺服器、家長控制和 QoS"
             price={1000}
-            rating={7}
+            rating={5}
             image="https://upload.wikimedia.org/wikipedia/commons/5/53/Asus_x21_ultrabook.jpg"
-          />
+          /> */}
           {/* {/* product */}
         </div>
 
         <div className="home_row">
           <Product
-            title="我有二本書"
+            title="TP-Link AC1750 智慧 WiFi 路由器 (Archer A7) - 家用雙頻千兆無線網路路由器 適用於 Alexa、VPN 伺服器、家長控制和 QoS"
             price={1000}
             rating={7}
-            image="https://upload.wikimedia.org/wikipedia/commons/5/53/Asus_x21_ultrabook.jpg"
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
-          <Product />
-          <Product />
+          <Product
+            title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
+            price={100}
+            rating={5}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          />
+          <Product
+            title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
+            price={100}
+            rating={5}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          />
           {/* product */}
           {/* product */}
           {/* product */}
         </div>
         <div className="home_row">
-          <Product />
+          <Product
+            title="Fitbit Versa 2 健康與健身智慧型手錶 帶心率 音樂功能 Alexa內建 睡眠和游泳追蹤 黑/碳 單一尺寸 (含 S 和 L 錶帶)"
+            price={100}
+            rating={5}
+            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          />
           {/* <Product /> */}
           {/* product */}
         </div>

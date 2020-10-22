@@ -27,6 +27,13 @@ function Product({ id, title, price, image, rating }) {
     });
   };
 
+  /* // js:17 非常棒的小技巧 
+// 物件存取後再ＨＯＭＥ.js針對rating物件只要輸入數字就能改變product.js的rating 數量 : 51:00 // 
+
+Refrence:
+https://zh-hant.reactjs.org/docs/lists-and-keys.html
+*/
+
   return (
     <div className="product">
       <div className="product_info">
@@ -36,13 +43,6 @@ function Product({ id, title, price, image, rating }) {
           <strong>{price}</strong>
         </p>
 
-        {/* // js:17 非常棒的小技巧 
-// 物件存取後再ＨＯＭＥ.js針對rating物件只要輸入數字就能改變product.js的rating 數量 : 51:00 // 
-
-Refrence:
-https://zh-hant.reactjs.org/docs/lists-and-keys.html
-*/}
-
         <div className="product_rating">
           {Array(rating)
             //for rating this object
@@ -50,10 +50,7 @@ https://zh-hant.reactjs.org/docs/lists-and-keys.html
             .map((_, i) => (
               //map is 迴圈 : i is index
               //圖樣可以直接copy 但要標籤 img and aria-label
-
-              <span role="img" aria-label="sheep">
-                🐑
-              </span>
+              <p>⭐</p>
             ))}
         </div>
       </div>
