@@ -1,3 +1,8 @@
+.checkoutProduct_title {
+  font-size: 15px;
+  font-weight: 800;
+}
+
 .checkoutProduct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,12 +20,15 @@
 }
 
 .checkoutProduct img {
-  color: blue;
-  max-width: 50%;
+  max-width: 30%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .checkoutProduct button {
   background-color: yellow;
   margin-bottom: 30px;
+  border-color: red;
+  color: blue;
 }
-/*# sourceMappingURL=checkoutProduct.css.map */
+/*# sourceMappingURL=CheckoutProduct.css.map */

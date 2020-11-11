@@ -1,11 +1,12 @@
 $Barry: blue;
 $Marry: red;
 $angle: white;
+$banana: yellow;
 
-.checkoutProduct {
-}
-
-.checkoutProduct_img {
+.checkoutProduct_title {
+  font-size: 15px;
+  font-weight: 800;
+  //文字的厚度 //
 }
 
 .checkoutProduct_price {
@@ -25,13 +26,17 @@ $angle: white;
   }
 
   img {
-    color: $Barry;
-    max-width: 50%;
+    // color: $Barry;
+    max-width: 30%;
+    object-fit: contain;
+    //調整物件的大小
   }
 
   button {
-    background-color: yellow;
+    background-color: $banana;
     margin-bottom: 30px;
+    border-color: $Marry;
+    color: $Barry;
   }
 }
 

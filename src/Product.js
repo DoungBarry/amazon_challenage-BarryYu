@@ -10,6 +10,8 @@ function Product({ id, title, price, image, rating }) {
   //useStateValue 是將數據層資料拉進來 （ 拉去給checkout )
   const [{ basket }, dispatch] = useStateValue();
 
+  //原本的state 由basket 取代. 
+
   //dispatch  the item into data layer
 
   //dispatch =>reduex的功能 是將資料推送到數據layer

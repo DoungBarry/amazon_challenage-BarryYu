@@ -1,5 +1,6 @@
 .home_image {
   min-width: 100%;
+
   /* 可以IMAGE 有漸層 */
   height: 600px;
   z-index: -1;
