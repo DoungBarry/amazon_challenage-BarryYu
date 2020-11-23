@@ -1,7 +1,21 @@
 import React from "react";
 import "./CheckoutProduct.css";
-
+import { useStateValue } from "./StateProvider";
 function CheckoutProduct({ id, title, price, image, rating }) {
+
+  const [{ basket }, dispatch] = useStateValue();
+   //remove the item the baskets  回到reduceer ,, {basket}
+  const removeFromBasket= () =>{ 
+    dispatch({
+type:"REMOVE_FROM_BASKET",
+item: {
+        id: id,
+        // title: title,
+        // image: image,
+        // price: price,
+        // rating: rating,
+}})
+  }
 
   return (
     <div className="checkoutProduct">
@@ -24,7 +38,7 @@ function CheckoutProduct({ id, title, price, image, rating }) {
               </span>
             ))}
         </div>
-        <button> remove to basket </button>
+        <button  onClick={removeFromBasket}> remove to basket </button>
       </div>
     </div>
   );
