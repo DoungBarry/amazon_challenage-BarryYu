@@ -1,0 +1,51 @@
+.login_logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  /* Check this css */
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  /*  1. 基本款先做的ＣＳＳ */
+
+  align-items: center;
+  height: 100vh;
+  /* 整個頁面的長度 */
+  background-color: orange;
+}
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  /*  1. 基本款先做的ＣＳＳ */
+
+  width: 350px;
+  height: fit-content;
+  /* 調整邊線的長度 */
+
+  border-radius: 10px;
+  border: 10px solid rgb(80, 27, 226);
+  background-color: lightsalmon;
+  padding: 20px;
+  /* 2.將container 的邊線打出來 */
+
+  align-items: center;
+  /* 3.每個項目flex 置中 */
+
+  font-variant: inherit;
+  font-family: Impact;
+}
+
+.login_container > button {
+  background-color: lawngreen;
+  margin: 10px;
+}
+
+.login_container > form > h5 {
+  margin-bottom: 1px;
+}

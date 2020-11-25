@@ -13,13 +13,15 @@ export const getBasketTotal = (basket) =>
 
 //reduce 是累加的由左至右 （ 數量＋2 ,2個item的價格累加 ）
 
-function reducer  (state, action)  {
+const reducer = (state, action) => {
 
 
 
   // state 初始狀態
   // actaion 從籃子取出來，動作後?    // => { new state }  
+
 //   Actions 是從你的應用程式傳遞資料到你的 store 的資訊 payload。它們是 store 唯一的資訊來源。你藉由 store.dispatch() 來把它們傳遞到 store。
+
 // Action 是一般的 JavaScript 物件。action 必須有一個 type 屬性，它代表被執行的 action 的類型。Type 通常應該被定義成字串常數。一旦你的應用程式夠大了，你能會想把它們移進一個單獨的 module。
 
 
@@ -28,7 +30,7 @@ console.log("this si the basket >>>>>", action);
 
  console.log("this si the basket .type>>>>>", action.id);
 
-
+//非常重要！！！！！！！！！！！！！！
 
   //需要一個開關 和 做甚麼動作
   switch (action.type) {

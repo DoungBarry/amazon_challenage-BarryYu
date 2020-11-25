@@ -1,58 +1,53 @@
-import React from "react";
-import "./Login.css";
-import { Button } from "@material-ui/core";
-import { auth, provider } from "./firebase";
-//這裡是使用者自己的資料//
-import { useStateValue } from "./StateProvider";
-import { actionTypes } from "./reducer";
-
+import React from 'react'
+import "./Login.css"
+import {Link} from "react-router-dom"
 function Login() {
-  const [state, dispatch] = useStateValue();
-  //dispatch 就像一把槍可以射擊,拍攝很多動作,記錄登入使用者的過程
-
-  const signIn = () => {
-    //sing in ...
-
-    //先在firebase.js  先定義auth //
-    //建立登入認證//
-    auth
-      //Popup 彈出視窗
-      .signInWithPopup(provider)
-      .then((result) => {
-        //注意物件裡面要用逗號分開
-        dispatch({
-          type: actionTypes.SET_USER,
-          user: result.user,
-        });
-
-        //實際上這些數據在登入google 認證後會映射到 app.js
-
-        // console.log(result.user);
-      })
-
-      //當登入的時候
-
-      .catch((error) => alert(error.message));
-  };
-
   return (
-    <div className="login">
-      <div className="login_logo">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png"
-          alt=""
-        />
+    
+    <div className='login'>
+      <Link to="/">
+          <img        className="login_logo" src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'></img>
+  
+      </Link>
+      
 
-        <img
-          src="https://www.logo.wine/a/logo/Facebook/Facebook-Logo.wine.svg"
-          alt=""
-        />
-      </div>
-      <Button type="submit" onClick={signIn}>
-        Sign In 登入
-      </Button>
+{/* //建立第二區塊section */}
+<div className="login_container">
+  <h1>Sigin in 登入帳號</h1>
+
+  <form>
+    <h5>Email</h5>
+    <input type="text"></input>
+  </form>
+  <form>
+    <h5>Password</h5>
+    <input type="text"></input>
+  </form>
+  <button className="login_signInButton" onclink="click">登入帳號</button>
+<p>
+
+這個是Kunamu-適合專給予台灣人使用
+的Twitter ,可以Post短片,及新聞, 並且會標籤分類. Twitter全世界很多人使用,台灣卻極少人使用, 原因是台灣人討論是情不喜歡太多國際化. 這也是好處！國際的TWITTER一堆假新聞. 
+
+</p>
+<section className="login_account">
+<button onClick="click" >創建帳號</button>
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+
     </div>
-  );
+
+  )
 }
 
-export default Login;
+export default Login
+

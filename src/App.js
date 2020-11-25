@@ -5,7 +5,7 @@ import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
 import { useStateValue } from "./StateProvider";
-
+import Login from "./Login"
 //網路路由套件
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -20,19 +20,29 @@ function App() {
         {/* 這邊創建component  */}
 
         {/* 換頁面的時候Header 部會改變 */}
-        <Header></Header>
 
-        <Switch>
-          <Route path="/checkout">
+<Switch>
+
+<Route path ="/login">
+  <Login>Login page</Login> 
+     {/* this is login page css lab */}
+</Route>
+     
+
+
+
+ <Route path="/checkout">
             {/* 這邊放入網頁組件,表示到checkout路徑時會顯示下列 */}
             {/* 可以測試: localhot:3000/checkout 路由成功會顯示CHECKOUT內的文字 */}
             {/* <Header></Header> */}
+            <Header></Header>
             <Checkout></Checkout>
           </Route>
 
           <Route path="/">
             {/* 這邊放入網頁組件,表示到checkout路徑時會顯示下列 */}
             {/* <Header></Header> */}
+            <Header></Header>
             <Home />
           </Route>
         </Switch>
