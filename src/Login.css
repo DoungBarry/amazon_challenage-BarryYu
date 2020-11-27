@@ -16,7 +16,8 @@
   align-items: center;
   height: 100vh;
   /* 整個頁面的長度 */
-  background-color: orange;
+  /* background-color: orange; */
+  background-image: url("/Users/yutungcheng/project_front/Amazon/amazone-clone/image/Ku.png");
 }
 
 .login_container {
@@ -24,7 +25,7 @@
   flex-direction: column;
   /*  1. 基本款先做的ＣＳＳ */
 
-  width: 350px;
+  width: 40%;
   height: fit-content;
   /* 調整邊線的長度 */
 
@@ -41,11 +42,18 @@
   font-family: Impact;
 }
 
-.login_container > button {
-  background-color: lawngreen;
+.login_container > form > input {
+  width: 99%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.login_container > form > button {
+  background-color: yellow;
+  width: 100%;
   margin: 10px;
 }
 
 .login_container > form > h5 {
-  margin-bottom: 1px;
+  margin-bottom: 5px;
 }

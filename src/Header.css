@@ -10,6 +10,7 @@
 
 .header_logo {
   width: 100px;
+  height: 50px;
   margin: 0px 20px;
   /* 只調整左右邊20px */
   margin-top: 10px;
@@ -21,21 +22,23 @@
   display: flex;
   flex: 1;
   align-items: center;
-  border-radius: 24px;
+  border-radius: 10px;
 }
 
 .header_searchInput {
   height: 15px;
   padding: 10px;
   border: none;
-  width: 100%;
+  width: 70%;
+  border-radius: 5px 0 0 5px;
 }
 
 .header_searchIcon {
   background-color: #cd9042;
-  height: 22px !important   ;
+  height: 27px !important   ;
   /* //高度22px 很重要 ！！！why ? */
   padding: 5px;
+  border-radius: 0 5px 5px 0;
 }
 
 .header_nav {
