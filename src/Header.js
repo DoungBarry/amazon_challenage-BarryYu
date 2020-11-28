@@ -3,14 +3,21 @@ import "./Header.css";
 // import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-
 import { Link } from "react-router-dom";
-
 //當要使用Reduex這個API時 需要套用這個功能, 目的是可以將basket數據透過dispatch工能拉到數據層裡面
 import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket , user}, dispatch] = useStateValue();
+
+  const handleAuthentication =() =>{
+
+if (user) {
+auth.signOut();
+}
+
+  }
 
   return (
     <div className="header">
@@ -19,11 +26,8 @@ function Header() {
         <img
           className="header_logo"
           // src="http://pngimg.com/uploads/amazon/amazon_PNG11.png">
-
           src="/Users/yutungcheng/project_front/Amazon/amazone-clone/image/logo.png">
-{/* 
-    src="/Users/yutungcheng/project_front/Amazon/amazone-clone/image/download.png" > */}
-
+{/* src="/Users/yutungcheng/project_front/Amazon/amazone-clone/image/download.png" > */}
 </img>
       </Link>
       <div className="header_search">
@@ -33,10 +37,13 @@ function Header() {
       </div>
 
       <div className="header_nav">
-        <div className="header_option">
-          <span className="header_optionLineOne">你好,東承</span>
-          <span className="header_optionLineTwo">帳戶與清單</span>
+<Link to={!user && '/login'} >
+        {/* <Link to='/login'> */}
+        <div onClick={handleAuthentication} className="header_option">
+          <span className="header_optionLineOne">你好,客戶</span>
+  <span className="header_optionLineTwo">{ user ?'登出帳號':'登入帳號'}</span>
         </div>
+        </Link>
         <div className="header_option">
           <span className="header_optionLineOne">退貨？</span>
           <span className="header_optionLineTwo">與訂單</span>

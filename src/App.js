@@ -12,19 +12,22 @@ import { auth } from "./firebase";
 
 function App() {
 
-const [{authUser}, dispatch] = useStateValue(); 
+const [{}, dispatch] = useStateValue(); 
 //將資料＿copy
 
 useEffect(() => {
 
-auth.onAuthStateChanged(authUser)
 
-console.log('The user is >>>>> , authUser ');
+
+auth.onAuthStateChanged((authUser) =>{
+
+console.log('The user is >>>>> ', authUser )
 
 if (authUser) {
+  
   dispatch ({
 type: 'SET_USER' ,
-user :authUser ,
+user:authUser ,
   })
   //使用者登入 / 使用者已經登入 
 
@@ -34,9 +37,9 @@ type:'SET_USER' ,
 user:null ,
     })
   }
+  })
 //使用者登出  / 使用者已經登出
-
-}, [authUser,])
+}, [])
 //當這個ＡＰＰ組件讀取時 , 只運作一次  
 
 
