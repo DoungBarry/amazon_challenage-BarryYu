@@ -1,3 +1,6 @@
+import firebase from "firebase"
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyC6-b-IaBIF4Qu0miza68eDZW0XHtuc4wQ",
   authDomain: "challenage-barryyu.firebaseapp.com",
@@ -6,7 +9,7 @@ const firebaseConfig = {
   storageBucket: "challenage-barryyu.appspot.com",
   messagingSenderId: "850335035568",
   appId: "1:850335035568:web:754faa3b9598f7312d8b75",
-  measurementId: "G-92KQ66W3BN",
+  measurementId: "G-92KQ66W3BN"
 };
 
 //先定義出“應用程式”
@@ -22,8 +25,10 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 //設定到這等於完成啟動器-- open tour firebase website =>cloud store
 
-export { auth, provider };
+
+
+export { auth, db };
 //導出認證和估格的認證
 
-export default db;
+// export default db;
 //export db 導出數據庫

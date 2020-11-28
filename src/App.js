@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
@@ -8,9 +8,37 @@ import { useStateValue } from "./StateProvider";
 import Login from "./Login"
 //網路路由套件
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { auth } from "./firebase";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+
+const [{authUser}, dispatch] = useStateValue(); 
+//將資料＿copy
+
+useEffect(() => {
+
+auth.onAuthStateChanged(authUser)
+
+console.log('The user is >>>>> , authUser ');
+
+if (authUser) {
+  dispatch ({
+type: 'SET_USER' ,
+user :authUser ,
+  })
+  //使用者登入 / 使用者已經登入 
+
+}else  {
+    dispatch({
+type:'SET_USER' ,
+user:null ,
+    })
+  }
+//使用者登出  / 使用者已經登出
+
+}, [authUser,])
+//當這個ＡＰＰ組件讀取時 , 只運作一次  
+
 
   return (
     //BEM
