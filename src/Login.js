@@ -3,14 +3,15 @@ import "./Login.css"
 import {Link,useHistory} from "react-router-dom"
 
 // import { register } from './serviceWorker'
-import {auth} from "./firebase"
+import { auth } from "./firebase" ;
 function Login() {
 
 const [email, setEmail] = useState('') 
 const [password, setPassword] = useState('')
 const history =useHistory();
 
-const signIn = e=>{ e.preventDefault();
+const signIn = e => {
+   e.preventDefault();
 //s1 
   //when click on button {}
 //some fancy firebase login shitt...what mean ?
@@ -20,36 +21,31 @@ auth
 .signInWithEmailAndPassword(email,password) 
 .then(auth=>{
   history.push('/')
-
-console.log(auth)
-
 })
 .catch(error=>alert(error.message))
 }
 
-const register = e =>{e.preventDefault();
+const register = e =>{
+  e.preventDefault();
   //s2
   // when click on button { register }
   //preventDefault  防止默認 刷新 . 填完物件後 內容被刷新
 
 auth 
-.createUseWithEmailAndPassword(email,password)
+.createUserWithEmailAndPassword(email,password)
 //創造用戶
 .than((auth)=>{
+
+  if(auth){
+  history.push('/')
+}
   // S3 如果成功將創建新用戶帳號的郵件和密碼
   // go to js:js18
 console.log(auth)
-if(auth){
-  history.push('/')
-}
 
-
-
-  console.log(auth);
-})
-.catch(error=>alert(error.messages))
-
-//do 
+.catch(error=>alert(error.message)
+)
+} )
 
 }
 

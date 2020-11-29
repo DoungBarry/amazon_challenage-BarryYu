@@ -1,5 +1,4 @@
-import firebase from "firebase"
-
+import firebase from "firebase";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6-b-IaBIF4Qu0miza68eDZW0XHtuc4wQ",
@@ -27,7 +26,7 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 
 
-export { auth, db };
+export {  db, auth };
 //導出認證和估格的認證
 
 // export default db;

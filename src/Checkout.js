@@ -10,7 +10,7 @@ import { useStateValue } from "./StateProvider";
 function Checkout() {
 
   //useStateValue 是將數據層資料拉進來 （ 拉去給checkout )
-  const [{basket},dispatch] = useStateValue();
+  const [{basket,user},dispatch] = useStateValue();
 
   return (
     <div className="checkout">
@@ -24,6 +24,9 @@ function Checkout() {
         />
 
         <div>
+<h3>Hello, {user?.email}</h3>
+
+
           <h2 className="checkout_title">your Shopping Baskete購物車</h2>
 
 {basket.map (item=>(

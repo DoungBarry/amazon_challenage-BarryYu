@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Logo from "./logo.svg";
+
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
 import { useStateValue } from "./StateProvider";
-import Login from "./Login"
+import Login from "./Login";
 //網路路由套件
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
@@ -16,14 +16,15 @@ const [{}, dispatch] = useStateValue();
 //將資料＿copy
 
 useEffect(() => {
+// will only run once when the app componpent loads ...
 
 
+auth.onAuthStateChanged(authUser =>{
 
-auth.onAuthStateChanged((authUser) =>{
-
-console.log('The user is >>>>> ', authUser )
+console.log('The user is >>>>> ', authUser );
 
 if (authUser) {
+  //the user just logged in / the user was logged in 
   
   dispatch ({
 type: 'SET_USER' ,
